@@ -16,15 +16,14 @@ aCityToB = pd.read_csv('AcityToBcityDistance.csv',delimiter=',')
 origem = 'Arad'
 destino = 'Bucharest'
 visitadas =[]
-custoAtual=0 #f(n)
 
+custoAtual=distToBuch.loc[0,'DistanceToBucharest'] #custo de arad
 custoTotCidade=100000
 gn=0
 gnAnterior=0
 print ('City\t\t gn\t hn\t fn')
+visitadas.append(origem)
 proximaCidade=origem
-visitadas.append(proximaCidade)
-
 
 while (origem!='Bucharest'):
 	print('\n')
