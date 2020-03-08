@@ -1,5 +1,4 @@
 import pandas as pd
-import os
 
 def pega_distancia_ate_destino(cidade):
     for row, index in dist_linha_reta.iterrows():
