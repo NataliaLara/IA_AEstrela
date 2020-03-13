@@ -112,10 +112,11 @@ while(origem!=destino ):
 	imprime_borda()
 	origem = pega_cidade_menor_custo_borda()
 	gnAnterior=pega_gn_cidade_menor_custo_borda(origem)	
-	visitadas.append(origem)		
+	visitadas.append(origem)
+	print('\n')		
 
 
-print('\nCusto do caminho:',pega_menor_custo_borda())
+print('Custo do caminho:',pega_menor_custo_borda())
 print('borda: ',end="")
 imprime_borda()
 print('visitadas: ',visitadas)
