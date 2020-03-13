@@ -1,6 +1,6 @@
 Algoritmo de Busca A*
 
-Implementação do algoritmo de Busca A* - Prática II - IA - CEFET_MG 
+Implementação do algoritmo de Busca A* - Prática III - IA - CEFET_MG 
 
 Busca pelo melhor caminho para se viajar entre os estados da Romênia.
 
