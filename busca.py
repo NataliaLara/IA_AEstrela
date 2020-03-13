@@ -1,4 +1,5 @@
 import pandas as pd 
+import argparse
 import os
 
 
@@ -75,12 +76,17 @@ def pega_cidades_adjacentes(cidade):
         
     return lista_cidades
 
+parser = argparse.ArgumentParser()
+parser.add_argument('cidade_origem', help='Cidade de origem: De onde voce esta saindo.', type=str)
+parser.add_argument('cidade_destino', help='Cidade de destino: Onde voce quer chegar.', type=str)
+args = parser.parse_args()
 
 dist_linha_reta = pd.read_csv('distanceToBucharest.csv', delimiter=',')
 grafo = pd.read_csv('AcityToBcityDistance.csv',delimiter=',')
 
-origem = 'Arad'
-destino = 'Bucharest'
+
+origem = args.cidade_origem
+destino = args.cidade_destino
 visitadas =[]
 
 fn=dist_linha_reta.loc[0,'DistanceToBucharest'] #custo de arad
